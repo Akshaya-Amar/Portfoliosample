@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/css/jquery.animatedheadline.css">
+</head>
+<body>
+
+  <div class="container">
+  <h1 class="ah-headline">
+    <span>My favorite programming language is</span>
+    <span class="ah-words-wrapper">
+      <b class="is-visible">JavaScript</b>
+      <b>Swift</b>
+    </span>
+  </h1>
+</div>
+
+  <script src="jquery.min.js"></script>
+  <script src="dist/js/jquery.animatedheadline.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.container').animatedHeadline();
+
+    $('.container').animatedHeadline({
+      animationType: "intro rotate-1",
+      animationDelay: 2500,
+      barAnimationDelay: 3800,
+      barWaiting: 800,
+      lettersDelay: 50,
+      typeLettersDelay: 150,
+      selectionDuration: 500,
+      typeAnimationDelay: 1300,
+      revealDuration: 600,
+      revealAnimationDelay: 1500
+    });
+  });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+
+  body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .motodiv{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+
+  h1#moto{
+    font-size: 10em;
+    transition: .5s;
+    line-height: 0.8em;
+  }
+
+  h1#moto span{
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+    transition: .5s;
+  }
+
+  h1#moto span:nth-child(1):before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+    height: 30px;
+    width: 50%;
+    background: red;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.5s;
+    animation: my 3s 2;
+    animation-direction: alternate-reverse;
+  }
+
+  h1#moto:hover span:nth-child(1):before{
+    transform: scaleX(1);
+  }
+
+  @keyframes my {
+    0%, 20%{
+      transform: scaleX(1);
+    }
+  }
+
+
+  @keyframes mymy {
+      content: 'wao';
+      color: white;
+  }
+
+  h1#moto span:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    width: 50%;
+    height: 30px;
+    left: 0;
+    background: red;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: .5s;
+    animation: my 3s 2;
+    animation-direction: alternate-reverse;
+  }
+
+  h1#moto:hover span:nth-child(2):before{
+    transform: scaleX(1);
+  }
+
+  h1#moto span hide{
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 1;
+    animation: my2 3s 2;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes my2 {
+    0%, 80%{
+      transition-delay: 0.5s;
+      opacity: 0;
+    }
+    100%{
+      padding-right: 35px;
+    }
+  }
+
+  h1#moto:hover span hide{
+    transition-delay: 0.5s;
+    opacity: 0;
+  }
+
+  h1#moto:hover span:nth-child(1) hide{
+    padding-right: 35px;
+  }
+
+  h1#moto:hover span:nth-child(2) hide{
+    padding-right: 50px;
+  }
+
+  p{
+    /* border-bottom: 2px solid red; */
+    text-decoration: underline;
+  }
+h2 span {
+    position: relative;
+    padding-bottom: 15px;
+}
+h2 span::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 1px; */
+    border-bottom: 5px solid #000;
+    content: ""
+}
+
+  </style>
+</head>
+<body>
+  <p>hello sir</p>
+
+  <h2><span>Horizon 2020, nouvelles opportunités<span></h2>
+
+  <div class="motodiv">
+  <h1 id="moto">
+    <span>Do<hide>n't</hide></span>
+    <span><hide>Qu</hide>it</span>
+  </h1>
+  </div>
+  <br>
+  <h1>items is there</h1>
+</body>
+</html>

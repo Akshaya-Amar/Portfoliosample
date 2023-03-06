@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    #img1, #img2, #section1{
+      position: relative;
+      float: left;
+    }
+
+    #ul1, #ul2, #section2{
+      position: relative;
+      float: right;
+    }
+
+    img{
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="section1">
+  </div>
+  <div id="section2">
+    <!-- <p>This is some more text and <span id="underlined">This is underlined</span></p> -->
+    <!-- <h1>This is heading</h1> -->
+  </div>
+
+  <div id="img2">
+    <p>The quick brown fox jumps over a lazy dog</p>
+  <img src="images/background1.jpg">
+  </div>
+  <div id="ul2">
+    <p>Wow! I love CSS</p>
+  <!-- <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+  </ul> -->
+  </div>
+
+  <!-- Button trigger modal -->
+  <button type="button" id="hello">First</button>
+  <button type="button" id="hello1">Second</button>
+  <button type="button" id="hello2">Third</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/background1.jpg" id="img1">
+          <ul id="ul1">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Second
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Third
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $('#hello').click(function(){
+    $('#exampleModal').modal('toggle');
+    // alert("hello");
+  });
+
+  $('#hello1').click(function(){
+    $('#exampleModal1').modal('toggle');
+  })
+
+  $('#hello2').click(function(){
+    $('#exampleModal2').modal('toggle');
+  })
+
+  </script>
+</body>
+</html>

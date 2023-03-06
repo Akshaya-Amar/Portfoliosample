@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <style type="text/css">
+
+  #sample{
+    margin-top: 50px;
+  }
+  .pdfobject-container{
+    height: 550px;
+    width: 720px;
+  }
+  .pdfobject {
+    border: 1px solid #666;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="sample">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="m-0 card-title">Description</h5>
+        <hr>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="viewpdf"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+
+  var viewer=$("#viewpdf");
+  PDFObject.embed('CCA-Certificate-Java Level 1.pdf', viewer);
+
+  </script>
+
+</body>
+</html>
